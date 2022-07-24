@@ -1,33 +1,33 @@
 # MapleStory-CMS95-Client-Address
 # 记录cms 95脱壳 + 客户端img + hs移除 + ip白名单 + crc检测
 
-WZ、IMG模式
-InitializeResMan
+<br>WZ、IMG模式</br>
+<br>InitializeResMan</br>
  //Function Address
-auto CWvsApp__InitializeResMan = reinterpret_cast<CWvsApp__InitializeResMan_t>(0xB0A3E0);
-auto PcCreateObject_IWzResMan = (void(__cdecl*)(void*, void*, void*))0xB04CA0;
-auto PcCreateObject_IWzNameSpace = (void(__cdecl*)(void*, void*, void*))0xB04D30;
-auto PcCreateObject_IWzFileSystem = (void(__cdecl*)(void*, void*, void*))0xB05EC0;
-auto CWvsApp__Dir_BackSlashToSlash = (void(__cdecl*)(void*))0xB02DC0;
-auto CWvsApp__Dir_upDir = (void(__cdecl*)(void*))0xB02EA0;
-auto bstr_constructor = (void(__fastcall*)(void*, void*, void*))0x42F750;
-auto IWzFileSystem__Init = (void*(__fastcall*)(void*, void*, void*))0xB0A030;
-auto IWZNameSpace__Mount = (void*(__fastcall*)(void*, void*, void*, void*, void*))0xB09FA0;
+<br>auto CWvsApp__InitializeResMan = reinterpret_cast<CWvsApp__InitializeResMan_t>(0xB0A3E0);</br>
+<br>auto PcCreateObject_IWzResMan = (void(__cdecl*)(void*, void*, void*))0xB04CA0;</br>
+<br>auto PcCreateObject_IWzNameSpace = (void(__cdecl*)(void*, void*, void*))0xB04D30;</br>
+<br>auto PcCreateObject_IWzFileSystem = (void(__cdecl*)(void*, void*, void*))0xB05EC0;</br>
+<br>auto CWvsApp__Dir_BackSlashToSlash = (void(__cdecl*)(void*))0xB02DC0;</br>
+<br>auto CWvsApp__Dir_upDir = (void(__cdecl*)(void*))0xB02EA0;</br>
+<br>auto bstr_constructor = (void(__fastcall*)(void*, void*, void*))0x42F750;</br>
+<br>auto IWzFileSystem__Init = (void*(__fastcall*)(void*, void*, void*))0xB0A030;</br>
+<br>auto IWZNameSpace__Mount = (void*(__fastcall*)(void*, void*, void*, void*, void*))0xB09FA0;</br>
 
 // DWORD Address
-auto g_rm = (void**)0xE309AC;
-auto g_root = (void**)0xE309B4;
-auto pNameSpace = 0xE2E564;
+<br>auto g_rm = (void**)0xE309AC;</br>
+<br>auto g_root = (void**)0xE309B4;</br>
+<br>auto pNameSpace = 0xE2E564;</br>
 
 
-移除HS
+<br>移除HS</br>
 00B0B8B0 CWvsApp::SetUp
 
-00B0BE62 -> NOP CSecurityClient::InitModule
-00B0C3E5 -> NOP CSecurityClient::StartModule
-00B080EC -> NOP CSecurityClient::Update
+<br>00B0BE62 -> NOP CSecurityClient::InitModule</br>
+<br>00B0C3E5 -> NOP CSecurityClient::StartModule</br>
+<br>00B080EC -> NOP CSecurityClient::Update</br>
 
-启动跳过CRC_VM，CRC检测，IP检查
+<br>启动跳过CRC_VM，CRC检测，IP检查</br>
 00B07730 CWvsApp::Run
 
 1、
@@ -88,8 +88,8 @@ NOP
 00B08EA6
 JMP
 
-IP白名单
-004BEEC0 CClientSocket::Connect
+<br>IP白名单</br>
+<br>004BEEC0 CClientSocket::Connect</br>
 
 004BF0EE 
 004BF0FD
@@ -98,7 +98,7 @@ nop
 004BF10C
 jmp
 
-00B060A0 CWvsApp::CallUpdate
+<br>00B060A0 CWvsApp::CallUpdate</br>
 
 1、00B06364 JMP
 
