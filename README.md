@@ -1,5 +1,6 @@
 # MapleStory-CMS95-Client-Address
 # 记录cms 95脱壳 + 客户端img + hs移除 + ip白名单 + crc检测
+# byWL -> QQ: 372881239, DISCORD: wl#1768
 
 <br>WZ、IMG模式</br>
 <br>InitializeResMan</br>
